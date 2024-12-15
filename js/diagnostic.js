@@ -120,6 +120,16 @@ const diseaseDatabase = {
         "Taches brunes parallèles aux nervures. Dessèchement prématuré des feuilles en cas d'attaque sévère.",
       imageUrl: "../assets/images/diseases/Rhynchosporiose3.jpg",
     },
+    {
+      plant: "maïs",
+      organ: "grain",
+      disease: "Maladie_Folliaires",
+      treatment:
+        "Rotation culturale, variétés tolérantes, traitement fongicide au stade 1-2 nœuds et,epiaison",
+      description:
+        "Taches brunes parallèles aux nervures. Dessèchement prématuré des feuilles en cas d'attaque sévère.",
+      imageUrl: "../assets/images/diseases/Maladies_Folliaires.jpg",
+    },
   ],
 
   findDiagnosis(plant, organ) {
