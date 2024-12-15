@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>DiagnoPlante | Expert en Diagnostic des Céréales</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Component -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div
+          class="logo"
+          onclick="window.location.href = '/'"
+          style="cursor: pointer"
+        >
+          <span>DiagnoPlante</span>
+        </div>
+        <div class="nav-links">
+          <a href="#accueil" class="active">Accueil</a>
+          <a href="#diagnostic">Diagnostic</a>
+          <a href="#guide">Guide</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="accueil" style="padding: 0 72px">
+      <div class="hero-content">
+        <h1>Diagnostic Expert des Céréales</h1>
+        <p>
+          Identifiez et traitez les maladies de vos cultures en
+          quelques clics
+        </p>
+        <a href="#diagnostic" class="cta-button"
+          >Commencer le Diagnostic</a
+        >
+      </div>
+      <div class="hero-image">
+        <img src="./assets/images//hero2.png" alt="Céréales saines" />
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Information Section -->
+      <section
+        class="info-section"
+        id="guide"
+        style="padding: 72px 72px"
+      >
+        <h2>Guide de Diagnostic des Plantes</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="icon">🌾</div>
+            <h3>Simple et Rapide</h3>
+            <p>
+              En 4 clics seulement, identifiez les maladies de vos
+              plantes
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="icon">🔍</div>
+            <h3>Diagnostic Précis</h3>
+            <p>Analyse basée sur des données agricoles expertisées</p>
+          </div>
+          <div class="info-card">
+            <div class="icon">💡</div>
+            <h3>Solutions Pratiques</h3>
+            <p>Conseils simples et efficaces pour le traitement</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Diagnostic Tool -->
+      <section class="diagnostic-section" id="diagnostic">
+        <div class="diagnostic-container">
+          <h2>Diagnostic des Maladies</h2>
+
+          <div class="progress-steps"></div>
+
+          <div class="diagnostic-form">
+            <div class="form-group">
+              <select id="plant-select" required>
+                <option value="" disabled selected>
+                  Choisissez une plante
+                </option>
+                <option value="blé">Blé</option>
+                <option value="orge">Orge</option>
+                <option value="maïs">Maïs</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <select id="organ-select" required>
+                <option value="" disabled selected>
+                  Sélectionnez la partie touchée
+                </option>
+                <option value="grain">Grain</option>
+                <option value="épi">Épi</option>
+                <option value="feuilles">Feuilles</option>
+                <option value="tige">Tige</option>
+                <option value="racines">Racines</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="diagnostic-result hidden"></div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="contact-container">
+          <h2>Contactez-nous</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" required placeholder=" " />
+              <label for="name">Votre nom</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder=" "
+              />
+              <label for="email">Votre email</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                required
+                placeholder=" "
+              />
+              <label for="subject">Sujet</label>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                id="message"
+                required
+                placeholder=" "
+                rows="5"
+              ></textarea>
+              <label for="message">Votre message</label>
+            </div>
+
+            <button type="submit" class="submit-button">
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DiagnoPlante</h3>
+          <p>Expert en diagnostic des maladies des céréales</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <a href="#accueil">Accueil</a>
+          <a href="#diagnostic">Diagnostic</a>
+          <a href="#guide">Guide</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: contact@diagnoplante.fr</p>
+          <p>Téléphone: +33 1 23 45 67 89</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DiagnoPlante. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/diagnostic.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
