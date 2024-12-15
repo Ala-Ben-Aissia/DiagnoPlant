@@ -1,12 +1,9 @@
-// Main Application Logic
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Components
   initializeNavigation();
   initializeSectionAnimations();
   initializeContactForm();
 });
 
-// Navigation Functionality
 function initializeNavigation() {
   const navbar = document.querySelector(".navbar");
   const mobileMenuToggle = document.querySelector(
@@ -14,7 +11,6 @@ function initializeNavigation() {
   );
   const navLinks = document.querySelector(".nav-links");
 
-  // Navbar Scroll Effect - Changes navbar style when scrolling
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
       navbar.classList.add("scrolled");
@@ -23,14 +19,12 @@ function initializeNavigation() {
     }
   });
 
-  // Mobile Menu Toggle - Handles mobile menu interaction
   if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
     });
   }
 
-  // Smooth Scroll for Navigation Links - Provides smooth scrolling to sections
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -42,14 +36,13 @@ function initializeNavigation() {
           behavior: "smooth",
           block: "start",
         });
-        // Close mobile menu if open
+
         navLinks.classList.remove("active");
       }
     });
   });
 }
 
-// Section Animation on Scroll - Animates sections as they come into view
 function initializeSectionAnimations() {
   const sections = document.querySelectorAll(".section-animate");
 
@@ -76,7 +69,6 @@ function initializeSectionAnimations() {
   });
 }
 
-// Contact Form Handling - Manages contact form submission and feedback
 function initializeContactForm() {
   const contactForm = document.getElementById("contact-form");
 
@@ -89,16 +81,13 @@ function initializeContactForm() {
       );
       const originalButtonText = submitButton.textContent;
 
-      // Show loading state
       submitButton.disabled = true;
       submitButton.innerHTML = "Envoie en cours";
       submitButton.innerHTML += '<span class="loading"></span>';
 
       try {
-        // Simulate form submission (replace with actual API call)
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
-        // Show success message
         showNotification("Message envoyé avec succès!", "success");
         contactForm.reset();
       } catch (error) {
@@ -107,7 +96,6 @@ function initializeContactForm() {
           "error"
         );
       } finally {
-        // Reset button state
         submitButton.disabled = false;
         submitButton.textContent = originalButtonText;
       }
@@ -115,7 +103,6 @@ function initializeContactForm() {
   }
 }
 
-// Notification System - Displays feedback messages to users
 function showNotification(message, type = "info") {
   const notification = document.createElement("div");
   notification.className = `notification ${type}`;
@@ -123,12 +110,10 @@ function showNotification(message, type = "info") {
 
   document.body.appendChild(notification);
 
-  // Trigger entrance animation
   setTimeout(() => {
     notification.classList.add("visible");
   }, 100);
 
-  // Remove notification after delay
   setTimeout(() => {
     notification.classList.remove("visible");
     setTimeout(() => {
@@ -137,7 +122,6 @@ function showNotification(message, type = "info") {
   }, 3000);
 }
 
-// Utility Functions
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -150,7 +134,6 @@ function debounce(func, wait) {
   };
 }
 
-// Date Formatting Utility
 function formatDate(date) {
   return new Intl.DateTimeFormat("fr-FR", {
     year: "numeric",
@@ -159,9 +142,7 @@ function formatDate(date) {
   }).format(date);
 }
 
-// String Utility Functions
 const stringUtils = {
-  // Capitalizes first letter of each word
   capitalize: (str) => {
     return str
       .toLowerCase()
@@ -170,12 +151,10 @@ const stringUtils = {
       .join(" ");
   },
 
-  // Removes accents from text
   removeAccents: (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   },
 
-  // Slugifies a string for URLs
   slugify: (str) => {
     return str
       .toLowerCase()
@@ -186,9 +165,7 @@ const stringUtils = {
   },
 };
 
-// DOM Utility Functions
 const domUtils = {
-  // Creates an element with classes and attributes
   createElement: (tag, classes = [], attributes = {}) => {
     const element = document.createElement(tag);
     classes.forEach((className) => element.classList.add(className));
@@ -198,23 +175,19 @@ const domUtils = {
     return element;
   },
 
-  // Safely removes an element from DOM
   removeElement: (element) => {
     if (element && element.parentNode) {
       element.parentNode.removeChild(element);
     }
   },
 
-  // Adds event listener with automatic cleanup
   addEventListenerWithCleanup: (element, event, handler) => {
     element.addEventListener(event, handler);
     return () => element.removeEventListener(event, handler);
   },
 };
 
-// Viewport Utility Functions
 const viewportUtils = {
-  // Checks if element is in viewport
   isInViewport: (element) => {
     const rect = element.getBoundingClientRect();
     return (
@@ -228,7 +201,6 @@ const viewportUtils = {
     );
   },
 
-  // Gets viewport dimensions
   getViewportDimensions: () => {
     return {
       width:
@@ -239,7 +211,6 @@ const viewportUtils = {
   },
 };
 
-// Export utilities for use in other modules
 window.appUtils = {
   string: stringUtils,
   dom: domUtils,

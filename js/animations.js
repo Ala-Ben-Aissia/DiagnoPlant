@@ -1,4 +1,3 @@
-// Animation Utility Class
 class AnimationController {
   constructor() {
     this.initializeIntersectionObserver();
@@ -26,7 +25,6 @@ class AnimationController {
       });
     }, options);
 
-    // Observe all animatable elements
     document
       .querySelectorAll(".animate-on-scroll")
       .forEach((element) => {
@@ -52,7 +50,6 @@ class AnimationController {
   }
 
   setupScrollAnimations() {
-    // Progressive loading animation for sections
     document.querySelectorAll("section").forEach((section, index) => {
       section.style.setProperty(
         "--animation-delay",
@@ -61,7 +58,6 @@ class AnimationController {
       section.classList.add("animate-on-scroll");
     });
 
-    // Smooth scroll implementation
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", (e) => {
         e.preventDefault();
@@ -101,20 +97,17 @@ class AnimationController {
     }
   }
 
-  // Easing function for smooth scroll
   easeInOutCubic(t) {
     return t < 0.5
       ? 4 * t * t * t
       : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
   }
 
-  // Add entrance animation to element
   addEntranceAnimation(element, animationClass) {
     element.classList.add("animate-on-scroll", animationClass);
     this.observer.observe(element);
   }
 
-  // Add hover animation to element
   addHoverAnimation(element, animationClass) {
     element.addEventListener("mouseenter", () => {
       element.classList.add(animationClass);
@@ -125,7 +118,6 @@ class AnimationController {
     });
   }
 
-  // Create loading spinner
   createLoadingSpinner(parent) {
     const spinner = document.createElement("div");
     spinner.className = "loading-spinner";
@@ -133,7 +125,6 @@ class AnimationController {
     return spinner;
   }
 
-  // Remove loading spinner
   removeLoadingSpinner(spinner) {
     spinner.addEventListener("animationend", () => {
       spinner.remove();
@@ -142,7 +133,6 @@ class AnimationController {
   }
 }
 
-// Initialize animations when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   window.AnimationController = new AnimationController();
 });
