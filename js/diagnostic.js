@@ -133,7 +133,7 @@ const diseaseDatabase = {
   ],
 
   findDiagnosis(plant, organ) {
-    return this.diagnoses.find((d) => {
+    return this.diagnoses.find(d => {
       return d.plant === plant && d.organ === organ;
     });
   },
@@ -270,7 +270,7 @@ class DiagnosticTool {
   showResult(diagnosis) {
     const treatments = diagnosis.treatment
       .split(",")
-      .map((t) => t.trim());
+      .map(t => t.trim());
 
     this.resultContainer.innerHTML = `
         <div class="result-wrapper">
