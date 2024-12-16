@@ -1,141 +1,137 @@
 const diseaseDatabase = {
   diagnoses: [
+    // Blé (Wheat) diseases
     {
       plant: "blé",
       organ: "grain",
-      disease: "Carie commune",
-      treatment:
-        "Traitement de semences avec fongicide spécifique, utilisation de semences certifiées",
+      disease: "Maladie charbonneuse",
+      treatment: "Rotation des cultures, traitement des semences",
       description:
-        "Les grains sont transformés en masse de spores noires et dégagent une odeur de poisson pourri. La maladie se propage lors de la récolte quand les grains cariés éclatent.",
-      imageUrl: "../assets/images/diseases/Carie_commune.jpg",
+        "Les grains sont transformés en une masse noire poudreuse. Ils sont entièrement détruits et remplacés par cette poudre noire.",
+      imageUrl: "../assets/images/diseases/maladie_charbonneuse.webp",
     },
     {
       plant: "blé",
       organ: "épi",
-      disease: "Fusariose de l'épi",
+      disease: "Charbon du blé",
       treatment:
-        "Rotation culturale, labour des résidus, choix variétal résistant, traitement fongicide à la floraison",
+        "Désinfection des semences avec fongicide systémique",
       description:
-        "Les épillets prennent une couleur rose-orangée à blanchâtre. Les grains sont échaudés et peuvent contenir des mycotoxines dangereuses.",
-      imageUrl: "../assets/images/diseases/Fusariose_de_l'epi.jpg",
-    },
-    {
-      plant: "blé",
-      organ: "racines et épi",
-      disease: "Piétin échaudage",
-      treatment:
-        "Rotation longue (3 ans minimum), choix variétal tolérant, travail du sol favorisant la décomposition des résidus",
-      description:
-        "Les plantes jaunissent prématurément par foyers. Le système racinaire est nécrosé avec une coloration brun foncé. Les épis sont échaudés avec des grains ratatinés.",
-      imageUrl: "../assets/images/diseases/Pietin_echaudage.jpg",
-    },
-    {
-      plant: "orge",
-      organ: "épi",
-      disease: "Charbon nu",
-      treatment:
-        "Utilisation de semences certifiées, traitement de semences systémique spécifique",
-      description:
-        "Les épis sont transformés en masse noire poudreuse qui se disperse au vent. Seul le rachis de l'épi reste intact. L'infection se fait à la floraison.",
-      imageUrl: "../assets/images/diseases/Charbon_nu.jpg",
-    },
-    {
-      plant: "orge",
-      organ: "feuilles",
-      disease: "Helminthosporiose",
-      treatment:
-        "Rotation culturale, variétés résistantes, traitement fongicide au stade 1-2 nœuds et épiaison",
-      description:
-        "Taches brunes allongées sur les feuilles, bordées de jaune. Les taches peuvent fusionner et causer un dessèchement complet des feuilles.",
-      imageUrl: "../assets/images/diseases/Helminthosporiose.jpg",
-    },
-    {
-      plant: "maïs",
-      organ: "épi",
-      disease: "Fusariose de l'épi",
-      treatment:
-        "Rotation culturale, broyage fin des résidus, variétés tolérantes, traitement fongicide si risque élevé",
-      description:
-        "Moisissure rose à rouge sur les grains, débutant souvent à la pointe de l'épi. Production de mycotoxines dangereuses pour l'alimentation.",
-      imageUrl: "../assets/images/diseases/Fusariose_de_l'epi2.jpg",
-    },
-    {
-      plant: "maïs",
-      organ: "tige",
-      disease: "Charbon commun",
-      treatment:
-        "Équilibre de la fertilisation azotée, éviter les stress hydriques, gestion des résidus de culture",
-      description:
-        "Grosses tumeurs gris argenté sur tiges, feuilles et épis. Les tumeurs éclatent et libèrent une poudre noire de spores.",
+        "Les épis infectés deviennent noirs et poudreux, détruisant totalement les grains qu'ils contiennent.",
       imageUrl: "../assets/images/diseases/Charbon_commun.jpg",
     },
     {
       plant: "blé",
-      organ: "feuilles",
-      disease: "Septoriose",
+      organ: "tige",
+      disease: "Piétin échaudage",
       treatment:
-        "Programme fongicide adapté, choix variétal, date de semis adaptée",
+        "Rotation des cultures, désinfection des semences, amélioration du drainage",
       description:
-        "Taches brunes allongées avec des points noirs (pycnides). Progression de bas en haut sur les étages foliaires avec le temps.",
-      imageUrl: "../assets/images/diseases/Septoriose.jpg",
+        "Les bases des tiges montrent des nécroses, entraînant un affaiblissement et parfois un échaudage prématuré des plantes.",
+      imageUrl: "../assets/images/diseases/Pietin_echaudage.jpg",
+    },
+    {
+      plant: "blé",
+      organ: "racines",
+      disease: "Fonte des semis",
+      treatment:
+        "Traitement des semences, semis dans des conditions optimales",
+      description:
+        "Les racines des plantules se nécrosent, entraînant un flétrissement et parfois la mort des jeunes pousses.",
+      imageUrl: "../assets/images/diseases/Fonte_semis.webp",
+    },
+
+    // Orge (Barley) diseases
+    {
+      plant: "orge",
+      organ: "grain",
+      disease: "Charbon nu de l'orge",
+      treatment:
+        "Désinfection des semences avec fongicide systémique",
+      description:
+        "Les grains infectés se transforment en une masse poudreuse noire. La contamination peut se propager rapidement.",
+      imageUrl: "../assets/images/diseases/Charbon_nu.jpg",
     },
     {
       plant: "orge",
       organ: "tige",
-      disease: "Rhynchosporiose",
+      disease: "Piétin échaudage",
       treatment:
-        "Rotation culturale, variétés résistantes, traitement fongicide préventif",
+        "Rotation des cultures, variétés résistantes, amélioration des conditions de culture",
       description:
-        "Taches ovales à centre clair et bordure brune sur feuilles. Progression rapide en conditions humides.",
-      imageUrl: "../assets/images/diseases/Rhynchosporiose.jpg",
+        "La base des tiges devient nécrosée, causant un affaiblissement structurel et une perte de rendement.",
+      imageUrl: "../assets/images/diseases/Pietin_echaudage.jpg",
     },
     {
       plant: "orge",
-      organ: "racines",
-      disease: "Rhynchosporiose",
-      treatment:
-        "Rotation culturale, variétés tolérantes, traitement fongicide au stade 1-2 nœuds et,epiaison",
-      description:
-        "Taches brunes parallèles aux nervures. Dessèchement prématuré des feuilles en cas d'attaque sévère.",
-      imageUrl: "../assets/images/diseases/Rhynchosporiose2.jpg",
-    },
-    {
-      plant: "maïs",
       organ: "feuilles",
       disease: "Helminthosporiose",
       treatment:
-        "Rotation des cultures, variétés tolérantes, gestion des résidus",
+        "Choix variétal, traitement fongicide, bonne gestion de la fertilisation",
       description:
-        "Longues taches brunes parallèles aux nervures. Dessèchement précoce du feuillage en cas d'attaque sévère.",
+        "Taches brun foncé entourées de jaune apparaissent sur les feuilles, réduisant leur capacité photosynthétique.",
       imageUrl: "../assets/images/diseases/Helminthosporiose.jpg",
     },
-    {
-      plant: "maïs",
-      organ: "racines",
-      disease: "Rhynchosporiose",
-      treatment:
-        "Rotation culturale, variétés tolérantes, traitement fongicide au stade 1-2 nœuds et,epiaison",
-      description:
-        "Taches brunes parallèles aux nervures. Dessèchement prématuré des feuilles en cas d'attaque sévère.",
-      imageUrl: "../assets/images/diseases/Rhynchosporiose3.jpg",
-    },
+
+    // Maïs (Corn) diseases
     {
       plant: "maïs",
       organ: "grain",
-      disease: "Maladie_Folliaires",
+      disease: "Fusariose",
       treatment:
-        "Rotation culturale, variétés tolérantes, traitement fongicide au stade 1-2 nœuds et,epiaison",
+        "Rotation des cultures, hygiène des champs, traitements fongicides en végétation",
       description:
-        "Taches brunes parallèles aux nervures. Dessèchement prématuré des feuilles en cas d'attaque sévère.",
-      imageUrl: "../assets/images/diseases/Maladies_Folliaires.jpg",
+        "Les grains présentent une moisissure rose ou rougeâtre, avec un risque élevé de contamination par des mycotoxines.",
+      imageUrl: "../assets/images/diseases/Fusarioses_mais.jpg",
+    },
+    {
+      plant: "maïs",
+      organ: "tige",
+      disease: "Charbon commun du maïs",
+      treatment:
+        "Amélioration des pratiques culturales, gestion des apports azotés",
+      description:
+        "Tumeurs remplies d'une poudre noire apparaissent sur les tiges et les épis, affectant la récolte.",
+      imageUrl: "../assets/images/diseases/Charbon_commun.jpg",
+    },
+
+    // Seigle (Rye) diseases
+    {
+      plant: "seigle",
+      organ: "épi",
+      disease: "Ergot du seigle",
+      treatment: "Rotation des cultures, semences certifiées",
+      description:
+        "Des excroissances noires et toxiques se forment à la place des grains, présentant un danger pour la consommation.",
+      imageUrl: "../assets/images/diseases/Ergot_seigle.jpg",
+    },
+
+    // Generic diseases affecting all cereals
+    {
+      plant: "céréales",
+      organ: "feuilles",
+      disease: "Oïdium des céréales",
+      treatment: "Traitement fongicide préventif, choix variétal",
+      description:
+        "Un feutrage blanc apparaît sur les feuilles, réduisant leur efficacité photosynthétique.",
+      imageUrl: "../assets/images/diseases/Oidium_cereales.jpg",
+    },
+    {
+      plant: "céréales",
+      organ: "racines",
+      disease: "Piétin commun",
+      treatment:
+        "Rotation culturale, amélioration du drainage, réduction des densités de semis",
+      description:
+        "Les racines se dégradent, affectant le développement des plantes et leur capacité à absorber l'eau.",
+      imageUrl: "../assets/images/diseases/Pietin_echaudage.jpg",
     },
   ],
 
   findDiagnosis(plant, organ) {
-    return this.diagnoses.find(d => {
-      return d.plant === plant && d.organ === organ;
-    });
+    return this.diagnoses.find(
+      d => d.plant === plant && d.organ === organ
+    );
   },
 };
 
@@ -250,20 +246,13 @@ class DiagnosticTool {
         organSelect.value
       );
 
-      if (diagnosis) {
-        setTimeout(() => {
-          this.currentStep = 4;
-          this.updateStep();
-          this.showResult(diagnosis);
-        }, 1000);
-      } else {
-        this.clearResult();
-        console.log(
-          "No diagnosis found for:",
-          plantSelect.value,
-          organSelect.value
-        );
-      }
+      setTimeout(() => {
+        this.currentStep = 4;
+        this.updateStep();
+        diagnosis
+          ? this.showResult(diagnosis)
+          : this.showNoResult(plantSelect.value, organSelect.value);
+      }, 1000);
     }
   }
 
@@ -342,6 +331,73 @@ class DiagnosticTool {
                         <button class="btn-secondary" onclick="location.reload()">
                             <span class="icon">🔄</span>
                             Nouveau diagnostic
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    this.resultContainer.classList.remove("hidden");
+    requestAnimationFrame(() => {
+      this.resultContainer.classList.add("fade-in");
+    });
+  }
+
+  showNoResult(plant, organ) {
+    this.resultContainer.innerHTML = `
+        <div class="result-wrapper no-result">
+            <!-- Header Section -->
+            <div class="result-header">
+                <div class="header-content">
+                    <h3>Aucun Résultat Trouvé</h3>
+                    <span class="diagnosis-badge error">Non trouvé</span>
+                </div>
+                <div class="plant-details">
+                    <span class="plant-type">${plant.toUpperCase()}</span>
+                    <span class="organ-type">${organ.toUpperCase()}</span>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="diagnosis-content">
+                <div class="content-left">
+                    <div class="disease-card error-card">
+                        <div class="card-header">
+                            <span class="icon">⚠️</span>
+                            <h4>Information de Recherche</h4>
+                        </div>
+                        <div class="search-details">
+                            <p>Aucun diagnostic n'a été trouvé pour cette combinaison:</p>
+                            <ul class="search-params">
+                                <li><strong>Plante:</strong> ${plant}</li>
+                                <li><strong>Organe:</strong> ${organ}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <div class="card-header">
+                            <span class="icon">💡</span>
+                            <h4>Suggestions</h4>
+                        </div>
+                        <ul class="suggestions">
+                            <li>Vérifiez que vous avez sélectionné la bonne combinaison plante/organe</li>
+                            <li>Essayez de sélectionner un organe différent de la même plante</li>
+                            <li>Consultez notre guide des maladies pour plus d'informations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <div class="action-buttons">
+                        <button class="btn-primary" onclick="location.reload()">
+                            <span class="icon">🔄</span>
+                            Nouveau diagnostic
+                        </button>
+                        <button class="btn-secondary" onclick="window.location.href='#contact'">
+                            <span class="icon">📞</span>
+                            Contacter le support
                         </button>
                     </div>
                 </div>

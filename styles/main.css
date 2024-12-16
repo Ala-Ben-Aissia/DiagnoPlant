@@ -235,6 +235,67 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.no-result .diagnosis-badge.error {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.error-card {
+  border: 1px solid #fee2e2;
+  background-color: #fff5f5;
+}
+
+.search-details {
+  padding: 1rem;
+}
+
+.search-params {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  border-left: 3px solid #dc2626;
+  padding-left: 1rem;
+}
+
+.search-params li {
+  margin: 0.5rem 0;
+  color: #4b5563;
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+}
+
+.suggestions li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
+
+.suggestions li::before {
+  content: "•";
+  color: #dc2626;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.suggestion-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   h1 {
